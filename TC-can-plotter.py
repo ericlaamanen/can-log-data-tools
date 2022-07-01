@@ -1,13 +1,9 @@
-
+# Tool for plotting thermocouple data from Omega OM-CP Data Logger software with all TC data on the same plot.
 
 import pandas as pd
 import datetime
-import time
 import numpy as np
 from matplotlib import pyplot as plt
-from scipy.optimize import curve_fit
-from scipy import stats
-import statistics
 
 df = pd.read_excel(open('filename.xlsx', 'rb'), sheet_name='R75355 MultiChannel - Data', skiprows=6)
 
@@ -35,7 +31,6 @@ ax.set_position([box.x0, box.y0 + box.height * 0.1,
 # Place legend below plot
 ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.13),
           fancybox=True, shadow=True, ncol=5)
-
 
 # Rotate x axis labels
 ax.tick_params(axis='x', labelrotation=45)
