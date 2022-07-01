@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.dates
 
 # Return all csv files under the root directory using glob module and store in new DF
-files = glob.glob("hvs-123/*/*")
+files = glob.glob("can-logs/*/*")
 df = pd.concat([pd.read_csv(f) for f in files])
 
 # Convert timestamp column to datetime format and remove timezone information
